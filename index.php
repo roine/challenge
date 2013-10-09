@@ -7,6 +7,7 @@ class Response{
 	'Email Address' => 'demonj92@gmail.com',
 	'Name' => 'Jonathan de Montalembert',
 	'Resume' => 'https://www.dropbox.com/s/znr4nguuvn6y04s/jonathan-de_montalembert-web_developer.pdf'
+	'Source' => 'view-source:http://demo.jdemont.com/'
 	);
 	
 	public static function handler($a){
@@ -15,10 +16,8 @@ class Response{
 			case 'Email Address':
 			case 'Name':
 			case 'Resume':
-			$response = self::$information[$a];
-			break;
 			case 'Source':
-			show_source(__FILE__);
+			$response = self::$information[$a];
 			break;
 			case 'Question':
 			$response = self::resolve_question();
