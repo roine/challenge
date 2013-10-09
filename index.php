@@ -6,7 +6,7 @@ class Response{
 	'Ping' => 'Ok',
 	'Email Address' => 'demonj92@gmail.com',
 	'Name' => 'Jonathan de Montalembert',
-	'Resume' => 'https://www.dropbox.com/s/znr4nguuvn6y04s/jonathan-de_montalembert-web_developer.pdf'
+	'Resume' => 'https://www.dropbox.com/s/znr4nguuvn6y04s/jonathan-de_montalembert-web_developer.pdf',
 	'Source' => 'view-source:http://demo.jdemont.com/'
 	);
 	
