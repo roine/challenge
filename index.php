@@ -2,12 +2,12 @@
 
 class Response{
 
-	private static $information = [
+	private static $information = array(
 	'Ping' => 'Ok',
 	'Email Address' => 'demonj92@gmail.com',
 	'Name' => 'Jonathan de Montalembert',
 	'Resume' => 'https://www.dropbox.com/s/znr4nguuvn6y04s/jonathan-de_montalembert-web_developer.pdf'
-	];
+	);
 	
 	public static function handler($a){
 		switch ($a){
@@ -55,7 +55,5 @@ class Response{
 
 
 }
-$_POST['a'] = 'Question';
-$_POST['q'] = 'What is -8 + 9';
 Response::handler($_POST['a']);
 ?>
