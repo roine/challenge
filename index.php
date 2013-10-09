@@ -38,6 +38,7 @@ class Response{
 
 		$number1 = (int)$numbers[0][0];
 		$number2 = (int)$numbers[0][1];
+		// trim the whitespace
 		$operand = trim($operand[0], " ");
 
 		switch($operand){
@@ -60,7 +61,6 @@ class Response{
 
 
 }
-$_POST['a'] = 'Question';
-$_POST['q'] = 'What is -16 / 10';
+
 Response::handler($_POST['a']);
 ?>
