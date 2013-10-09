@@ -33,20 +33,25 @@ class Response{
 	private static function resolve_question(){
 		$q = $_POST['q'];
 
-		preg_match_all('/-?\d/', $q, $numbers);
+		preg_match_all('!-?\d+!', $q, $numbers);
 		preg_match('/\s[+*\/-]\s/', $q, $operand);
-		switch($operand[0]){
+
+		$number1 = (int)$numbers[0][0];
+		$number2 = (int)$numbers[0][1];
+		$operand = trim($operand[0], " ");
+
+		switch($operand){
 			case '+':
-			return $numbers[0] + $numbers[1];
+			return $number1 + $number2;
 			break;
 			case '-':
-			return $numbers[0] - $numbers[1];
+			return $number1 - $number2;
 			break;
 			case '/':
-			return $numbers[0] / $numbers[1];
+			return $number1 / $number2;
 			break;
 			case '*':
-			return $numbers[0] * $numbers[1];
+			return $number1 * $number2;
 			break;
 			default:
 			return "Something went wrong!".$operand[0];
@@ -55,5 +60,7 @@ class Response{
 
 
 }
+$_POST['a'] = 'Question';
+$_POST['q'] = 'What is -16 / 10';
 Response::handler($_POST['a']);
 ?>
